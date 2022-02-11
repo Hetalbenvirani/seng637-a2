@@ -4,9 +4,9 @@
 
 > **Automated Requirements-Based API Unit Testing using JUnit**
 
-> Instructor: Dr. Behrouz Far (far@ucalgary.ca)
+> Instructor: Dr. Behrouz Far (far@ucalgary.ca) 
 
-> Department of Electrical and Computer Engineering
+> Department of Electrical and Software Engineering
 
 > University of Calgary
 
@@ -14,12 +14,12 @@ Due Date: TBD
 
 > **TABLE OF CONTENTS**
 
-- [1 INTRODUCTION](#1-introduction)
-  - [1.1 **OBJECTIVES**](#11-objectives)
-  - [1.2 **THIS LAB IS A GROUP WORK**](#12-this-lab-is-a-group-work)
-  - [1.3 **OVERVIEW**](#13-overview)
-  - [1.4 **TESTING TOOLS**](#14-testing-tools)
-  - [1.5 **SYSTEM UNDER TEST**](#15-system-under-test)
+- [1 **INTRODUCTION**](#1-introduction)
+  - [1.1 OBJECTIVES](#11-objectives)
+  - [1.2 THIS LAB IS A GROUP WORK](#12-this-lab-is-a-group-work)
+  - [1.3 OVERVIEW](#13-overview)
+  - [1.4 TESTING TOOLS](#14-testing-tools)
+  - [1.5 SYSTEM UNDER TEST](#15-system-under-test)
 - [2 **INSTRUCTIONS**](#2-instructions)
   - [2.1 **FAMILIARIZATION**](#21-familiarization)
     - [2.1.1 Create an Eclipse Project](#211-create-an-eclipse-project)
@@ -39,9 +39,9 @@ Due Date: TBD
 - [5 REFERENCES](#5-references)
 - [6 APPENDIX A – JAVADOC EXAMPLE](#6-appendix-a--javadoc-example)
 
-# 1 INTRODUCTION
+# 1 **INTRODUCTION**
 
-## 1.1 **OBJECTIVES**
+## 1.1 OBJECTIVES
 
 The main objective of this assignment is to introduce students to the fundamentals of automated unit testing specifically unit testing based on requirements for each unit. The most widely used unit testing tool for Java is the JUnit framework, which is a part of the XUnit framework family.
 
@@ -50,13 +50,13 @@ After completing the lab, students will be able:
 - To develop automated test code in JUnit and other XUnit testing frameworks such as NUnit, CSUnit, PHPUnit etc.
 - To utilize and work with mock objects in test-code development.
 
-## 1.2 **THIS LAB IS A GROUP WORK**
+## 1.2 THIS LAB IS A GROUP WORK
 
 All the tasks of this lab should be completed in groups of four/five (as you formed in lab 1). The report will also be completed as a group.
 
-## 1.3 **OVERVIEW**
+## 1.3 OVERVIEW
 
-This lab can be divided into three main sections. Similar to lab 1, thefirst section is familiarization. During the familiarization stage, studentswill be shown how to set up a JUnit test project in Eclipse using JUnit,create a unit test, and how to navigate Javadocs.
+This lab can be divided into three main sections. Similar to lab 1, the first section is familiarization. During the familiarization stage, students will be shown how to set up a JUnit test project in Eclipse using JUnit,create a unit test, and how to navigate Javadocs.
 
 After familiarization, the second section of the lab is unit test generation based on the requirements specified in Javadocs. In this stage, students will develop unit test suites for two classes. These test suites will be comprised of unit tests which have been generated according to the requirements.
 
@@ -74,7 +74,7 @@ During test code development in this lab, students will also develop and work wi
 
 Finally, upon completion of the test suites, during the last stage, the tests will be executed on several versions of the SUT and test results will be collected.
 
-## 1.4 **TESTING TOOLS**
+## 1.4 TESTING TOOLS
 
 The main testing tool for this lab is JUnit [4]. JUnit is a popular free unit testing tool and framework for Java. For more information on JUnit, see class notes and JUnit reference website: [http://www.junit.org.](http://www.junit.org/)
 
@@ -83,9 +83,9 @@ specification to use to derive test suites.
 
 Javadoc allows developers to create Application Programming Interface (API) documentation within source code together with code itself. Creating the documentation and the code in the same location does not only improve communication between developers, maintainers and testers, but it also makes it simpler to keep the documentation up to date, and prevent potential redundancies and/or mistakes. For more information on Javadoc, see <https://www.oracle.com/technetwork/java/javase/documentation/javadoc-137458.html>
 
-## 1.5 **SYSTEM UNDER TEST**
+## 1.5 SYSTEM UNDER TEST
 
-The system to be tested for this lab is JFreeChart [3]. JFreeChart is an open source Java framework for chart calculation, creation and display. This framework supports many different (graphical) chart types, including pie charts, bar charts, line charts, histograms, and several other chart types. To get started with the JFreeChart system, download the “JFreeChart v1.0.zip” file from Github repository ([./Assignment2-artifact.zip](Assignment02-artifact.zip)) and extract the entire archive to a known location. More information on how to get started with these files will be provided in the familiarization stage (Section 2.1). Note that the versions of JFreeChart distributed for this lab do not correspond with actual releases of JFreeChart. The versions have been modified for the purposes of this lab.
+The system to be tested for this lab is JFreeChart [3]. JFreeChart is an open source Java framework for chart calculation, creation and display. This framework supports many different (graphical) chart types, including pie charts, bar charts, line charts, histograms, and several other chart types. To get started with the JFreeChart system, download the “jfreechart-1.0.19.zip” file from Github repository ([./Assignment2-artifact.zip](Assignment02-artifact.zip)) and extract the entire archive to a known location. More information on how to get started with these files will be provided in the familiarization stage (Section 2.1). Note that the versions of JFreeChart distributed for this lab do not correspond with actual releases of JFreeChart. The versions have been modified for the purposes of this lab.
 
 The JFreeChart framework is intended to be integrated into other systems as a quick and simple way to add charting functionality to other Java applications. With this in mind, the API for JFreeChart is required to be relatively simple to understand, as it is intended to be used by many developers as an open source off-the-shelf framework. A snapshot of four different types of charts drawn using JFreeChart is shown in Figure 1.
 
@@ -93,7 +93,7 @@ While the JFreeChart system is not technically a stand-alone application, the de
 
 The framework is grouped into two main packages, (1) org.jfree.chart and (2) org.jfree.data. Each of these two packages is also divided into several other smaller packages. For the purpose of testing in this lab, we will be focusing on the org.jfree.data package.
 
-> ![](media/c3ec92333fb13a17c7688061ae4277db.jpeg)
+> ![](media/chart-types.jpeg)
 
 **Figure 1 - A snapshot of four different types of charts drawn using JFreeChart.**
 
@@ -103,7 +103,7 @@ This section details the instructions for executing the lab. All sections of thi
 
 ## 2.1 **FAMILIARIZATION**
 
-All students of each group should perform this section of the lab together on a single computer. Ensure that everyone understands the concepts in this section before moving on to the rest of the lab.
+Ensure that everyone understands the concepts in this section before moving on to the rest of the lab.
 
 1. If you haven’t done so already, extract the _JFreeChartv1.0.zip_ file from [Assignment2-artifact.zip](./Assignment2-artifact.zip).
 
@@ -115,7 +115,7 @@ All students of each group should perform this section of the lab together on a 
 
 1.  Open the _New Project_ dialog by selecting the _File -\> New -\> Project_…
 
-1.  Under the folder Java, ensure that _Java Project_ is selected and click _Next_.
+1.  Under the folder Java, ensure that _Java Project_ is selected and in Use and execution environment JRE click on **vesrsion8** and then click _Next_ (media/creatingProject.png).
 
 1.  The dialog should now be prompting for the project name. Enter _JFreeChart_ in the _Project Name_ field, and then click _Next_.
 
@@ -123,21 +123,21 @@ All students of each group should perform this section of the lab together on a 
 
 1.  The _Java Settings_ dialog should now be displayed. This dialog has five tabs along the top: _Source_, _Projects_, _Libraries_, _Order and Export_ and _Module Dependencies_. Move to the _Libraries_ tab, and click the _Add External JARs (or Libraries)…_ button.
 
-2.  Select the _jfreechart.jar_ file from the known location that you already extracted in and click _Open_. Click _Add External Libraries_… again, this time add all the .jar files from the _lib_ and _lib/jMock_ directory where you have unzipped the _JFreeChart v1.0.zip_ file. The Java Settings dialog should now look like Figure 2, below.
+2.  Select the _jfreechart-1.0.19.jar_ file from the known location that you already extracted in and click _Open_. Click _Add External Libraries_… again, this time add all the .jar files from the _lib_ and _lib/jMock_ directory where you have unzipped the _jfreechart-1.0.19.zip_ file. The Java Settings dialog should now look like Figure 2, below.
 
-> ![A screenshot of a social media post Description automatically generated](media/bee07028e5cdebba6f6b37a4610d5a65.tmp)
+> ![A screenshot of a social media post Description automatically generated](media/externalLibraries.png)
 
 **Figure 2 - The Java Settings dialog after adding required archives**
 
 3.  Click _Finish_. The project (SUT) is now set up and ready for testing. To run the demo classes, in the package explorer expand the _Referenced Libraries_ item in the newly created JFreeChart project, exposing the .jar files just added. Right click on the _jfreechart.jar_, and select _Run As \-\> Java Application_ (Figure 3).
 
-![](media/a3bb26912bf293f175adab2db9161c6f.png)
+
 
 **Figure 3 - Running JFreeChart**
 
 4.  In the _Select Java Application_ dialog, select any of the four demo applications (e.g., _TimeSeriesChartDemo1_), and click _OK_ as shown in Figure 4.
 
-> ![](media/b432ec4061a138641ecec0dc1a24cdc9.tmp)
+> ![](media/showingCharts.png)
 
 **Figure 4 - The Select Java Application dialog**
 
@@ -175,7 +175,8 @@ To create a test suite containing a single unit test in JUnit, follow these step
 6.  Click _Finish_.
 
 7.  As a practice, write a simple test case for the getCentralValue() method.
-    See Figure 7.
+    See ![](media/JunitTest.tmp)
+.
 
 ```java
 package org.jfree.data.test;
@@ -217,14 +218,13 @@ public class RangeTest {
     org.jfree.data.test) and select _Run As -\> JUnit Test_.
 
 9.  This will change the perspective to the JUnit perspective, and run all the
-    tests within the RangeTest class. The test just written should pass,
-    indicated by the JUnit view similar to Figure 8 below.
+    tests within the RangeTest class. The test just written should pass
 
-![](media/9c5c760b6bbf2846507c4129d1fb2c9a.tmp)
 
 **Figure 8 - JUnit view showing passed test**
 
 ### 2.1.4 Navigate Javadoc API Specifications
+![](media/doc.png)
 
 The test generation section of this lab (Section 2.2) will require you to generate unit tests for a number of classes based on specifications (requirements) contained in the Javadocs for those classes. If you’re already familiar with Javadoc, feel free to skip this section and continue from Section 2.2.
 
@@ -288,7 +288,13 @@ public void calculateColumnTotalForTwoValues() {
 
 2.  After you documented your test plan, you should discuss in your report how you are designing the test cases (recall the “test-case design” lectures from the class). Since you are given the requirements only, you should apply black-box test-case design techniques such equivalence classes, boundary value analysis, etc.. When applying these techniques, make sure to explicitly follow the steps discussed in the class, e.g., first derive the domain for each input variable, then the equivalence classes, etc. You should ensure that the requirements are adequately tested.
 
-3.  Carry out your test plan and create your test-cases on paper (your lab report) first. **To keep your workload manageable, we would like you to create test cases for all 5 methods of org.jfree.data.DataUtilities and choose 5 out of 15 methods for org.jfree.data.Range.**
+3.  Carry out your test plan and create your test-cases on paper (your lab report) first. **To keep your workload manageable, we would like you to create test cases for all 5 methods of org.jfree.data.DataUtilities and  5 out of 15 methods for org.jfree.data.Range including**:
+   - shift(Range base, double delta, boolean allowZeroCrossing)
+   - isNaNRange()
+   - expandToInclude(Range range, double value)
+   - combineIgnoringNaN(Range range1, Range range2)
+   - intersects(double b0, double b1)
+ 
 
 ### 2.2.4 Write your Test Code based on your Test-case Design
 
@@ -298,7 +304,7 @@ public void calculateColumnTotalForTwoValues() {
 
 3.  If you have divided the tests and completed them individually, then upon completion of the tests, review each other’s tests, looking for any inconsistencies or defects in the tests themselves.
 
-4.  Execute the test suite you have created on JFreeChart v1.0.zip. Note that the classes have random defects in them intentionally, and thus several of your tests should fail. Therefore, to write your test methods, you need to follow the specifications, not the actual results.
+4.  Execute the test suite you have created on jfreechart-1.0.19.zip. Note that the classes have random defects in them intentionally, and thus several of your tests should fail. Therefore, to write your test methods, you need to follow the specifications, not the actual results.
 
 # 3. SUMMARY
 
@@ -337,7 +343,7 @@ To be consistent, please use the template Word file [“Assignment2-ReportTempla
 
 ## 4.3 JUNIT TEST SUITE (60%)
 
-Your zipped Eclipse project including any external library for mocking and all test suite Java files, as a SINGLE file, should be submitted along with the lab report in D2L. The JUnit test should be executable AS IS. No restricting, importing, etc. should be needed.
+Your Eclipse project including any external library for mocking and all test suite Java files should be submitted along with the lab report in GitHub. The JUnit test should be executable AS IS. No restricting, importing, etc. should be needed.
 
 The grading criteria for JUnit test suite are as follows:
 
@@ -359,4 +365,4 @@ The grading criteria for JUnit test suite are as follows:
 
 # 6 APPENDIX A – JAVADOC EXAMPLE
 
-![](media/2302e46e9afb79b2d9477fc02f7f172d.png)
+![](media/doc.png)
