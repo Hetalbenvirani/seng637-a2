@@ -93,7 +93,7 @@ While the JFreeChart system is not technically a stand-alone application, the de
 
 The framework is grouped into two main packages, (1) org.jfree.chart and (2) org.jfree.data. Each of these two packages is also divided into several other smaller packages. For the purpose of testing in this lab, we will be focusing on the org.jfree.data package.
 
-> ![](media/chart-types.jpeg)
+> ![](media/1-chart-types.jpeg)
 
 **Figure 1 - A snapshot of four different types of charts drawn using JFreeChart.**
 
@@ -125,19 +125,19 @@ Ensure that everyone understands the concepts in this section before moving on t
 
 2.  Select the _jfreechart-1.0.19.jar_ file from the known location that you already extracted in and click _Open_. Click _Add External Libraries_… again, this time add all the .jar files from the _lib_ and _lib/jMock_ directory where you have unzipped the _jfreechart-1.0.19.zip_ file. The Java Settings dialog should now look like Figure 2, below.
 
-> ![A screenshot of a social media post Description automatically generated](media/externalLibraries.png)
+> ![A screenshot of a social media post Description automatically generated](media/2-externalLibraries.png)
 
 **Figure 2 - The Java Settings dialog after adding required archives**
 
 3.  Click _Finish_. The project (SUT) is now set up and ready for testing. To run the demo classes, in the package explorer expand the _Referenced Libraries_ item in the newly created JFreeChart project, exposing the .jar files just added. Right click on the _jfreechart.jar_, and select _Run As \-\> Java Application_ (Figure 3).
 
 
-
+![](media/3-running-jfreechart.png)
 **Figure 3 - Running JFreeChart**
 
 4.  In the _Select Java Application_ dialog, select any of the four demo applications (e.g., _TimeSeriesChartDemo1_), and click _OK_ as shown in Figure 4.
 
-> ![](media/showingCharts.png)
+> ![](media/4-showingCharts.png)
 
 **Figure 4 - The Select Java Application dialog**
 
@@ -164,18 +164,19 @@ To create a test suite containing a single unit test in JUnit, follow these step
     create a new package for the test cases. Ensuring that test classes are in a
     separate package makes it easier to keep the two apart.
 
-![](media/d6324ad9b61e371d11a3f54d126dc659.png)
+
+![](media/5-selecting-junit-testcase.png)
 
 **Figure 5 – Selecting JUnit Test Case**
 
-![](media/116ace7ad9d41ca0a3cec32dc72e1208.tmp)
+![](media/6-junit-testcase-dialog.png)
 
 **Figure 6 - The New JUnit Test Case dialog**
 
-6.  Click _Finish_.
+1.  Click _Finish_.
 
-7.  As a practice, write a simple test case for the getCentralValue() method.
-    See ![](media/JunitTest.tmp)
+2.  As a practice, write a simple test case for the getCentralValue() method.
+    See ![](media/6-JunitTest.png)
 .
 
 ```java
@@ -211,20 +212,19 @@ public class RangeTest {
 
 ```
 
-**Figure 7 – The RangeTest test class after addition of a simple test case**
 
-8.  Now that you have a completed test case, run the test class. To do this,
+1.  Now that you have a completed test case, run the test class. To do this,
     right click on the RangeTest class in the Package Explorer (under
     org.jfree.data.test) and select _Run As -\> JUnit Test_.
 
-9.  This will change the perspective to the JUnit perspective, and run all the
+2.  This will change the perspective to the JUnit perspective, and run all the
     tests within the RangeTest class. The test just written should pass
 
-
+ 
+  ![](media/8-junit-passed-test.png)
 **Figure 8 - JUnit view showing passed test**
 
 ### 2.1.4 Navigate Javadoc API Specifications
-![](media/doc.png)
 
 The test generation section of this lab (Section 2.2) will require you to generate unit tests for a number of classes based on specifications (requirements) contained in the Javadocs for those classes. If you’re already familiar with Javadoc, feel free to skip this section and continue from Section 2.2.
 
@@ -365,4 +365,4 @@ The grading criteria for JUnit test suite are as follows:
 
 # 6 APPENDIX A – JAVADOC EXAMPLE
 
-![](media/doc.png)
+![](media/9-doc.png)
