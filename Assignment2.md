@@ -332,7 +332,7 @@ It is mandatory for all team members to attend the demo session and explain the 
 
 ## 4.2 LAB REPORT (20%)
 
-To be consistent, please use the template Word file [“Assignment2-ReportTemplate.md”](Assignment2-ReportTemplate.md) provided in the reopsitory.
+To be consistent, please use the template file [“Assignment2-ReportTemplate.md”](Assignment2-ReportTemplate.md) provided in the reopsitory.
 
 | Marking scheme                                                                                                                                                                                                                                                                                                                                                                                                                                                        |     |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
